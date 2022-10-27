@@ -5,9 +5,38 @@ const PORT = 8000
 
 app.use(cors())
 
+class Survivor{
+  constructor(survivorName, health, damage, speed, armor, type){
+    this.survivorName = survivorName
+    this.health = health
+    this.damage = damage
+    this.speed = speed
+    this.armor = armor
+    this.type = type
+  }}
+
+const commando = new Survivor('Commando', 110, 12, 7,0, `ranged`)
+const acrid = new Survivor('Acrid', 160, 15,7,20, 'melee')
+const mercenary = new Survivor('Mercenary',110,12,7,20,'melee' )
+const huntress = new Survivor('Huntress',90,12,7,0,'ranged' )
+const bandit = new Survivor('Bandit',110,12,7,0,'ranged' )
+const artificer = new Survivor('Artificer',110,12,7,0,'ranged' )
+const rex = new Survivor('Rex',130,12,7,20,'ranged' )
+const loader = new Survivor('Loader', 160,12,7,20,'melee')
+const railgunner = new Survivor('Railgunner',110,12,7,0,'ranged' )
+const voidFiend = new Survivor('VoidFiend',110,12,7,0,'ranged' )
+const mulT = new Survivor('Mul-T',200,11,7,12,'ranged/melee' )
+const captain = new Survivor('Captain', 110,12,7,0,'ranged')
+const engineer = new Survivor('Engineer', 130,14,7,0,'ranged')
+const heretic = new Survivor('Heretic',440,18,8,0,'ranged' )
+
+
+
+
+
 class Item{
-    constructor(name, rarity, description,cooldown,stackType){
-      this.name = name
+    constructor(itemName, rarity, description,cooldown,stackType){
+      this.itemName = itemName
       this.rarity = rarity
       this.description = description
       this.cooldown = cooldown
@@ -202,14 +231,23 @@ const silenceBetweentwoStrikes = new Item("Silence Between Two Strikes.",'Orange
 const spectralCirclet = new Item("Spectral Circlet",'Orange',"Become an aspect of incorporeality.",'None','Celestine')
 
 
-// const arrayOfItems = [crowbar,infusion,brainstalks,chargedPerforator,superMassiveLeech]
+const survivors ={
+  'acrid': acrid,
+  'artificer': artificer,
+  'bandit': bandit,
+  'captain': captain,
+  'commando': commando,
+  'engineer': engineer,
+  'heretic': heretic,
+  'huntress': huntress,
+  'loader': loader,
+  'mul-t': mulT,
+  'mercenary': mercenary,
+  'rex': rex,
+  'railgunner': railgunner,
+  'void fiend': voidFiend
 
-// const itemLiteral = {
-//     'cautious slug': {
-//         'name': 'cautious slug',
-//         'color':'white',
-//     }
-// }
+}
 
 const items = {
     'armor piercing rounds': armorPiercingRounds,
@@ -396,15 +434,23 @@ const items = {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:name',(request,response)=>{
-  const itemName = (request.params.name.toLowerCase())
+app.get('/api/items/:itemName',(request,response)=>{
+  const itemName = (request.params.itemName.toLowerCase())
   console.log(items[itemName])
     if(items[itemName])
     response.json(items[itemName])
 })
 
+app.get('/api/survivors/:survivorName',(request,response)=>{
+  const survivorName = (request.params.survivorName.toLowerCase())
+  console.log(survivors[survivorName])
+    if(survivors[survivorName])
+    response.json(survivors[survivorName])
+})
+
 app.get('/api',(request,response)=>{
-    response.json(items)
+    // response.json(items)
+    response.json(survivors)
 })
 
 app.listen(process.env.PORT|| PORT, ()=>{
