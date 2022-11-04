@@ -1,0 +1,21 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+        <ul class="row list-unstyled">
+
+          <ul class="row list-unstyled">
+            <h2>List of Items</h2>
+            <% for(let i=0; i<items.length; i++) {%>
+              <li class="col-6 justify-content-between mt-5">
+                  <h2><%items[i].itemName%></h2>
+                </a>
+              </li>
+            <% } %>
+            </ul>
+      </div>  
+    </div>
+  </div>
+</div>
+</div>
+<%- include('partials/footer') -%>

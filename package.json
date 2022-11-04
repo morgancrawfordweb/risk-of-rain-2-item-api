@@ -1,15 +1,58 @@
 {
   "name": "riskofrainapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hey Everyone! This is a risk of rain web app that I created from the API I made earlier. I fell in love with game when my brother in-law gave me his copy for the Nintendo Switch. I love these kinds of games and it doesn't stop me from being all-powerful!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Morgan Crawford",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.25.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.4",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.13.15",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "validator": "^13.6.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morgancrawfordweb/risk-of-rain-2-item-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/morgancrawfordweb/risk-of-rain-2-item-api/issues"
+  },
+  "homepage": "https://github.com/morgancrawfordweb/risk-of-rain-2-item-api#readme",
+  "keywords": [
+    "Risk",
+    "of",
+    "Rain",
+    "React"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.0.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^5.5.0"
   }
 }
