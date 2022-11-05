@@ -12,7 +12,7 @@ module.exports = {
     },
     getCommonItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: req.r})
+        const item = await Item.find({rarity: req})
         if(item=="Common"){
         res.render('items.ejs',{item: item})
         }
