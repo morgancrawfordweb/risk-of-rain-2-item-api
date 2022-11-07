@@ -5,7 +5,7 @@ module.exports = {
     getAllSurvivors: async (req, res)=>{
         try{
             const survivors = await Survivor.find()
-            res.render('survivors.ejs',{survivors: survivors})
+            res.render('survivors.ejs', {survivors: survivors})
         }catch(err){
             console.log(err)
         }
@@ -13,7 +13,7 @@ module.exports = {
     getRangedSurvivors: async(req,res)=>{
     try{
         const rangedSurvivors = await Survivor.find({type: "Ranged"})
-        res.render('survivors.ejs',{rangedSurvivors: rangedSurvivors})
+        res.render('survivors.ejs', {rangedSurvivors: rangedSurvivors})
     }catch(err){
         console.log(err)
     }
@@ -21,7 +21,7 @@ module.exports = {
     getMeleeSurvivors: async(req,res) =>{
         try{
             const meleeSurvivors = await Survivor.find({type: "Melee"})
-            res.render('survivors.ejs',{meleeSurvivors: meleeSurvivors})
+            res.render('survivors.ejs', {meleeSurvivors: meleeSurvivors})
         }catch(err){
             console.log(err)
         }

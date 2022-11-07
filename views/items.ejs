@@ -4,15 +4,41 @@
       <div class="col-6">
         <ul class="row list-unstyled">
 
-          <ul class="row list-unstyled">
+          <div class="absolute">
             <h2>List of Items</h2>
-            <% for(let i=0; i<items.length; i++) {%>
-              <li class="col-6 justify-content-between mt-5">
-                  <h2><%items[i].itemName%></h2>
-                </a>
-              </li>
-            <% } %>
-            </ul>
+            <span>Below are the list of items pick-ups! The format for the items are below</span>
+
+            <table>
+
+              <tr>
+                <td>Item Name</td>
+                <td>These item names will be color coordinated with their rarity. White items are more common,</td>
+              </tr>
+              <tr>
+                <td>Item Description</td>
+                <td>This will be the items description including how they stack when you have multiple items in the same run.</td>
+              </tr>
+              <tr>
+                <td>Stack Type</td>
+                <td>Some items have different stack types and I feel it is important to note that. A linear stacktype is exactly how it sounds, if the item is +5%, then thats what it adds. A hyperbolic stack type sloewly gets less effective the more you stack.</td>
+              </tr>
+            </table>
+
+          </div>
+          
+          <% for(let i=0; i<items.length; i++) {%>
+            <li>
+              <br>
+                  <h4><%=items[i].itemName%></h4>
+                  <h6><%=items[i].description%></h6>
+                  <h6><%=items[i].stackType%></h6>
+              </br>
+            </li>
+
+          <% } %>
+          </ul>
+          
+
       </div>  
     </div>
   </div>

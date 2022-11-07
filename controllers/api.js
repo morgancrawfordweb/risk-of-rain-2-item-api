@@ -6,6 +6,7 @@ module.exports = {
     getAllSurvivors: async (req, res)=>{
         try{
             const survivors = await Survivor.find()
+            console.log(survivors)
             res.json(survivors)
         }catch(err){
             console.log(err)
@@ -30,7 +31,7 @@ module.exports = {
     getSpecificSurvivors: async(req,res) =>{
       try{
         const survivor = await Survivor.find({name: survivorName})
-        if(survivor == survivorName)
+        if(survivor)
         res.json(survivor)
       }catch(err){
         console.log(err)
@@ -38,8 +39,11 @@ module.exports = {
     },
     getAllItems: async(req,res) =>{
       try{
-        const item = await Item.find()
-        res.json(item)
+        const items = await Item.find().lean().toObject()
+        // const jsonItem = items.toObject()
+        console.log(items)
+        // res.render('items.ejs',{items: items})
+        res.json(items)
       }catch(err){
         console.log(err)
       }
@@ -48,6 +52,7 @@ module.exports = {
         try{
           const item = await Item.find({rarity: "Common"})
           res.json(item)
+          console.log(item)
         }catch(err){
           console.log(err)
         }

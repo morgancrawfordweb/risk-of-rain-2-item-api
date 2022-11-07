@@ -5,14 +5,29 @@
         <ul class="row list-unstyled">
 
 
-          <h2>List of Survivors</h2>
-          <% for(let i=0; i<survivors.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-                <h2><%=survivors[i]%></h2>
-              </a>
-            </li>
-          <% } %>
-          </ul>
+          <div class="absolute">
+            <h2>List of Survivors</h2>
+            <span>Here are all of the survivor stats!</span>
+
+          </div>
+
+       
+            <% for(let i=0; i<survivors.length; i++) {%>
+              <li>
+                <br>
+                    <h4><%=survivors[i].survivorName%></h4>
+                    <h6>Health:   <%=survivors[i].health%></h6>
+                    <h6>Health Regeneration:   <%=survivors[i].healthRegen%></h6>
+                    <h6>Damage:   <%=survivors[i].damage%></h6>
+                    <h6>Speed:   <%=survivors[i].speed%></h6>
+                    <h6>Armor:   <%=survivors[i].armor%></h6>
+                    <h6>Type:   <%=survivors[i].type%></h6>
+                </br>
+              </li>
+  
+            <% } %>
+            </ul>
+            
 
       </div>  
     </div>
