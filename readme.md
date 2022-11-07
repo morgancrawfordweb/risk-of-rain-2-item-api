@@ -5,6 +5,10 @@ I have noticed that video game console players are lagging behind with the resou
 This application will allow my console only homies to figure out their stats on their runs!
 This application will eventually;
 
+
+
+--Some optimizations I would add if I had more time on this project.--
+
 1. Have the survivors with a toggle level up. This way you can figure out the base stats of your survivor at any level.
 
 2. Be able to add items to your survivor for each play through will have. Want to have 400 crowbars to see how much damage you would do? Now you can!
