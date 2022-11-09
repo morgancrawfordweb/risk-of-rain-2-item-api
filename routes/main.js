@@ -15,7 +15,7 @@ router.get("/", indexController.getIndex);
 // router.get("/everything", indexController.getEverything);
 
 //This router will get everything item related
-router.get("/items", itemController.getAllItems);
+router.get("/everyItems", itemController.getAllItems);
 router.get("/items/common", itemController.getCommonItems);
 router.get("/items/uncommon", itemController.getUncommonItems);
 router.get("/items/legendary", itemController.getLegendaryItems);

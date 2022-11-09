@@ -5,7 +5,7 @@ const Item = require('../models/Item');
 module.exports = {
     getAllSurvivors: async (req, res)=>{
         try{
-            const survivors = await Survivor.find()
+            const survivors = await Survivor.find().lean()
             console.log(survivors)
             res.json(survivors)
         }catch(err){
@@ -14,7 +14,7 @@ module.exports = {
  },
     getRangedSurvivors: async(req,res)=>{
     try{
-        const rangedSurvivor = await Survivor.find({type: "Ranged"})
+        const rangedSurvivor = await Survivor.find({type: "Ranged"}).lean()
         res.json(rangedSurvivor)
     }catch(err){
         console.log(err)
@@ -22,7 +22,7 @@ module.exports = {
  },
     getMeleeSurvivors: async(req,res) =>{
         try{
-            const meleeSurvivor = await Survivor.find({type: "Melee"})
+            const meleeSurvivor = await Survivor.find({type: "Melee"}).lean()
             res.json(meleeSurvivor)
         }catch(err){
             console.log(err)
@@ -30,7 +30,7 @@ module.exports = {
     },    
     getSpecificSurvivors: async(req,res) =>{
       try{
-        const survivor = await Survivor.find({name: survivorName})
+        const survivor = await Survivor.find().lean()
         if(survivor)
         res.json(survivor)
       }catch(err){
@@ -39,10 +39,8 @@ module.exports = {
     },
     getAllItems: async(req,res) =>{
       try{
-        const items = await Item.find().lean().toObject()
-        // const jsonItem = items.toObject()
+        const items = await Item.find().lean()
         console.log(items)
-        // res.render('items.ejs',{items: items})
         res.json(items)
       }catch(err){
         console.log(err)
@@ -50,16 +48,17 @@ module.exports = {
     },
     getCommonItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Common"})
+          const item = await Item.find({rarity: 'Common'}).lean()
           res.json(item)
           console.log(item)
+          
         }catch(err){
           console.log(err)
         }
       },
       getUncommonItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Uncommon"})
+          const item = await Item.find({rarity: "Uncommon"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -67,7 +66,7 @@ module.exports = {
       },
       getLegendaryItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Legendary"})
+          const item = await Item.find({rarity: "Legendary"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -75,7 +74,7 @@ module.exports = {
       },
       getEquipmentItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Equipment"})
+          const item = await Item.find({rarity: "Equipment"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -83,7 +82,7 @@ module.exports = {
       },
       getVoidItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Void"})
+          const item = await Item.find({rarity: "Void"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -91,7 +90,7 @@ module.exports = {
       },
       getLunarItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Lunar"})
+          const item = await Item.find({rarity: "Lunar"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -99,7 +98,7 @@ module.exports = {
       },
       getBossItems: async(req,res) =>{
         try{
-          const item = await Item.find({rarity: "Boss"})
+          const item = await Item.find({rarity: "Boss"}).lean()
           res.json(item)
         }catch(err){
           console.log(err)
@@ -107,12 +106,11 @@ module.exports = {
       },
       getSpecificItems: async(req,res) =>{
         try{
-          const item = await Item.find({name: itemName})
-          if(item === itemName)
+          const item = await Item.find().lean()
           res.json(item)
         }catch(err){
           console.log(err)
         }
-      },
+      }
     
     }
