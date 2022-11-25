@@ -2,3 +2,15 @@ body{
     background-color: black;
     color: bisque;
 }
+#navBarHolder{
+    width: 80%;
+    padding: 2% 0;
+    position: fixed;
+}
+.title{
+    align-self: center;
+    padding: 7% 0;
+}
+#navBar *{
+    padding: 0 1%;
+}

@@ -4,7 +4,7 @@ const Item = require('../models/Item');
 module.exports = {
     getAllItems: async(req,res) =>{
       try{
-        const items = await Item.find()
+        const items = await Item.find().sort()
         res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
@@ -12,58 +12,60 @@ module.exports = {
     },
     getCommonItems: async(req,res) =>{
       try{
-        const item = await Item.find()
-        if(item.rarity=="Common"){
-        res.render('items.ejs',{item: item})
-        }
+        var sortedItems = {itemName: 1}
+        const items = await Item.find({rarity:"Common"}).sort(sortedItems)
+        
+        res.render('items.ejs',{items: items})
+        
       }catch(err){
         console.log(err)
       }
     },
     getUncommonItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Uncommon"})
-        res.render('items.ejs',{item: item})
+        var sortedItems = {itemName: 1}
+        const items = await Item.find({rarity: "Uncommon"}).sort(sortedItems)
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }
     },
     getLegendaryItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Legendary"})
-        res.render('items.ejs',{item: item})
+        const items = await Item.find({rarity: "Legendary"})
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }
     },
     getEquipmentItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Equipment"})
-        res.render('items.ejs',{item: item})
+        const items = await Item.find({rarity: "Equipment"})
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }
     },
     getVoidItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Void"})
-        res.render('items.ejs',{item: item})
+        const items = await Item.find({rarity: "Void"})
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }
     },
     getLunarItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Lunar"})
-        res.render('items.ejs',{item: item})
+        const items = await Item.find({rarity: "Lunar"})
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }
     },
     getBossItems: async(req,res) =>{
       try{
-        const item = await Item.find({rarity: "Boss"})
-        res.render('items.ejs',{item: item})
+        const items = await Item.find({rarity: "Boss"})
+        res.render('items.ejs',{items: items})
       }catch(err){
         console.log(err)
       }

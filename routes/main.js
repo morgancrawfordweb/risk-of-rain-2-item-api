@@ -15,21 +15,21 @@ router.get("/", indexController.getIndex);
 // router.get("/everything", indexController.getEverything);
 
 //This router will get everything item related
-router.get("/everyItems", itemController.getAllItems);
-router.get("/items/common", itemController.getCommonItems);
-router.get("/items/uncommon", itemController.getUncommonItems);
-router.get("/items/legendary", itemController.getLegendaryItems);
-router.get("/items/equipment", itemController.getEquipmentItems);
-router.get("/items/void", itemController.getVoidItems);
-router.get("/items/lunar", itemController.getLunarItems);
-router.get("/items/boss", itemController.getBossItems);
+router.get("/everyItem", itemController.getAllItems);
+router.get("/commonItems", itemController.getCommonItems);
+router.get("/uncommonItems", itemController.getUncommonItems);
+router.get("/legendaryItems", itemController.getLegendaryItems);
+router.get("/equipmentItems", itemController.getEquipmentItems);
+router.get("/voidItems", itemController.getVoidItems);
+router.get("/lunarItems", itemController.getLunarItems);
+router.get("/bossItems", itemController.getBossItems);
 // router.get("/items/:name", itemController.getSpecificItems);
 
 
 //This router will get everything survivor related
-router.get("/survivors", survivorController.getAllSurvivors);
-router.get("/survivors/rangedSurvivor", survivorController.getRangedSurvivors);
-router.get("/survivors/meleeSurvivor", survivorController.getMeleeSurvivors);
+router.get("/survivor", survivorController.getAllSurvivors);
+// router.get("/rangedSurvivors", survivorController.getRangedSurvivors);
+// router.get("/meleeSurvivors", survivorController.getMeleeSurvivors);
 // router.get(`/survivors/:name`, survivorController.getSpecificSurvivors);
 
 

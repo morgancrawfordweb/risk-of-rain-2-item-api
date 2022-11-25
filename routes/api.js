@@ -12,7 +12,7 @@ router.get("/", indexController.getIndex);
 // router.get("/everything", indexController.getEverything);
 
 //This router will get everything item related
-router.get("/items", apiController.getAllItems);
+router.get("/everyItem", apiController.getAllItems);
 router.get("/commonItems", apiController.getCommonItems);
 router.get("/uncommonItems", apiController.getUncommonItems);
 router.get("/legendaryItems", apiController.getLegendaryItems);
@@ -20,14 +20,14 @@ router.get("/equipmentItems", apiController.getEquipmentItems);
 router.get("/voidItems", apiController.getVoidItems);
 router.get("/lunarItems", apiController.getLunarItems);
 router.get("/bossItems", apiController.getBossItems);
-router.get("/:name", apiController.getSpecificItems);
+// router.get("/:name", apiController.getSpecificItems);
 
 
 //This router will get everything survivor related
-router.get("/survivors/allSurvivors", apiController.getAllSurvivors);
-router.get("/survivors/rangedSurvivors", apiController.getRangedSurvivors);
-router.get("/survivors/meleeSurvivors", apiController.getMeleeSurvivors);
-router.get(`/survivors/:name`, apiController.getSpecificSurvivors);
+router.get("/everySurvivor", apiController.getAllSurvivors);
+// router.get("/rangedSurvivors", apiController.getRangedSurvivors);
+// router.get("/meleeSurvivors", apiController.getMeleeSurvivors);
+// router.get(`/survivors/:name`, apiController.getSpecificSurvivors);
 
 
 module.exports = router;

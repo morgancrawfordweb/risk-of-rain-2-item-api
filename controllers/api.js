@@ -6,37 +6,39 @@ module.exports = {
     getAllSurvivors: async (req, res)=>{
         try{
             const survivors = await Survivor.find().lean()
-            console.log(survivors)
+
             res.json(survivors)
         }catch(err){
             console.log(err)
         }
  },
-    getRangedSurvivors: async(req,res)=>{
-    try{
-        const rangedSurvivor = await Survivor.find({type: "Ranged"}).lean()
-        res.json(rangedSurvivor)
-    }catch(err){
-        console.log(err)
-    }
- },
-    getMeleeSurvivors: async(req,res) =>{
-        try{
-            const meleeSurvivor = await Survivor.find({type: "Melee"}).lean()
-            res.json(meleeSurvivor)
-        }catch(err){
-            console.log(err)
-        }
-    },    
-    getSpecificSurvivors: async(req,res) =>{
-      try{
-        const survivor = await Survivor.find().lean()
-        if(survivor)
-        res.json(survivor)
-      }catch(err){
-        console.log(err)
-      }
-    },
+//     getRangedSurvivors: async(req,res)=>{
+//     try{
+//         const rangedSurvivors = await Survivor.find({type: "Ranged"}).lean()
+       
+//         res.json(rangedSurvivors)
+        
+//     }catch(err){
+//         console.log(err)
+//     }
+//  },
+//     getMeleeSurvivors: async(req,res) =>{
+//         try{
+//             const meleeSurvivors = await Survivor.find({type: "Melee"}).lean()
+//             res.json(meleeSurvivors)
+//         }catch(err){
+//             console.log(err)
+//         }
+//     },    
+//     getSpecificSurvivors: async(req,res) =>{
+//       try{
+//         const survivors = await Survivor.find().lean()
+//         if(survivors)
+//         res.json(survivors)
+//       }catch(err){
+//         console.log(err)
+//       }
+//     },
     getAllItems: async(req,res) =>{
       try{
         const items = await Item.find().lean()
@@ -104,13 +106,13 @@ module.exports = {
           console.log(err)
         }
       },
-      getSpecificItems: async(req,res) =>{
-        try{
-          const item = await Item.find().lean()
-          res.json(item)
-        }catch(err){
-          console.log(err)
-        }
-      }
+      // getSpecificItems: async(req,res) =>{
+      //   try{
+      //     const item = await Item.find().lean()
+      //     res.json(item)
+      //   }catch(err){
+      //     console.log(err)
+      //   }
+      // }
     
     }
