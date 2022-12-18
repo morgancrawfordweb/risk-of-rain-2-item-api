@@ -70,15 +70,17 @@ module.exports = {
         console.log(err)
       }
     },
-    // getSpecificItems: async(req,res) =>{
-    //   try{
-    //     const item = await Item.find({name: itemName})
-    //     if(item == itemName)
-    //     res.render('items.ejs',{item: item})
-    //   }catch(err){
-    //     console.log(err)
-    //   }
-    // },
+    getSpecificItems: async(req,res) =>{
+      try{
+
+        // need to figure out the translation between controller and actual query in the URL
+        const item = await Item.find({'item.itemName': req.params.item})
+
+        res.render('items.ejs',{item: item})
+      }catch(err){
+        console.log(err)
+      }
+    }
     
 }
 

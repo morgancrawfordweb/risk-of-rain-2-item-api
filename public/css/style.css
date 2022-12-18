@@ -14,3 +14,7 @@ body{
 #navBar *{
     padding: 0 1%;
 }
+li{
+    margin: 5%;
+    background-color: rgba(22, 116, 24, 0.392);
+}
