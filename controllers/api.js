@@ -106,13 +106,13 @@ module.exports = {
           console.log(err)
         }
       },
-      // getSpecificItems: async(req,res) =>{
-      //   try{
-      //     const item = await Item.find().lean()
-      //     res.json(item)
-      //   }catch(err){
-      //     console.log(err)
-      //   }
-      // }
+      getSpecificItems: async(req,res) =>{
+        try{
+          const item = await Item.find({'item.itemName': req.params.item}).lean()
+          res.json(item)
+        }catch(err){
+          console.log(err)
+        }
+      }
     
     }
