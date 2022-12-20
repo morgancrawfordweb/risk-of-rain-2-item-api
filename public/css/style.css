@@ -17,4 +17,18 @@ body{
 li{
     margin: 5%;
     background-color: rgba(22, 116, 24, 0.392);
+    padding: 15px;
+}
+.howTo{
+    border: 2px solid white;
+    justify-content: center;
+    margin: 50%;
+}
+tbody{
+    width: 100%;
+}
+tr{
+    margin: auto;
+    padding: 10px 0;
+    border-width: 2px;
 }
