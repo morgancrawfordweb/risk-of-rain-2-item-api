@@ -9,6 +9,7 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 
 
+
 const mainRoutes = require("./routes/main");
 const apiRoutes = require("./routes/api");
 
@@ -55,6 +56,6 @@ app.use("/api", apiRoutes);
 
 
 //Server Running
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
