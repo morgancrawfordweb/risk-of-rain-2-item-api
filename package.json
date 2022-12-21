@@ -4,8 +4,7 @@
   "description": "Hey Everyone! This is a risk of rain web app that I created from the API I made earlier. I fell in love with game when my brother in-law gave me his copy for the Nintendo Switch. I love these kinds of games and it doesn't stop me from being all-powerful!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start"
+    "start": "node server.js"
   },
   "author": "Morgan Crawford",
   "license": "ISC",

@@ -55,6 +55,6 @@ app.use("/api", apiRoutes);
 
 
 //Server Running
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Server is running better go catch it!`);
 });
