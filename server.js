@@ -8,7 +8,6 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 
-const PORT = process.env.PORT;
 
 const mainRoutes = require("./routes/main");
 const apiRoutes = require("./routes/api");
@@ -56,6 +55,6 @@ app.use("/api", apiRoutes);
 
 
 //Server Running
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 8888, () => {
   console.log(`Server is running on port ${PORT}`);
 });
