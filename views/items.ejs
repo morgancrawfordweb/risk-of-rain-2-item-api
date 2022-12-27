@@ -7,12 +7,11 @@
           <div class="absolute howTo">
             <h2>List of Items</h2>
             <span>Below are the list of items pick-ups! The format for the items are below</span>
-
             <table>
 
               <tr>
                 <td>Item Name</td>
-                <td>These item names will be color coordinated with their rarity. White items are more common,</td>
+                <td>The first line is the item name.</td>
               </tr>
               <tr>
                 <td>Item Description</td>
@@ -20,23 +19,50 @@
               </tr>
               <tr>
                 <td>Stack Type</td>
-                <td>Some items have different stack types and I feel it is important to note that. A linear stacktype is exactly how it sounds, if the item is +5%, then thats what it adds. A hyperbolic stack type sloewly gets less effective the more you stack.</td>
+                <td>Some items have different stack types and I feel it is important to note that. A linear stacktype is exactly how it sounds, if the item is +5%, then thats what it adds. A hyperbolic stack type slowely gets less effective the more you stack.</td>
               </tr>
             </table>
 
           </div>
+
+          <!-- <div class = "row">
+            <div class ="col-md-12 align-self-center">
+              <h2>Item layout below</h2>
+              <div class ='row'>
+              <div class = "col-4 col-sm-2 align-self-center">
+                Item Name
+              </div>
+              <div class = "col-sm-4 col-sm-10 align-self-center">
+                The Item name and any descriptions will go here
+              </div>
+              <div class = "col-8 col-sm-2 align-self-center">
+                Item Description
+              </div>
+              <div class = "col-4 col-sm-10 align-self-center">
+                This will be the items description including how they stack when you have multiple items in the same run.
+              </div>
+              <div class = "col-8 col-sm-2 align-self-center">
+                Stack Type
+              </div>
+              <div class = "col-4 col-sm-10 align-self-center">
+                Some items have different stack types and I feel it is important to note that. A linear stacktype is exactly how it sounds, if the item is +5%, then thats what it adds. A hyperbolic stack type slowely gets less effective the more you stack.
+              </div>
+              </div>  
+            </div>
+          </div> -->
           
           <% for(let i=0; i<items.length; i++) {%>
             <li>
               <br>
-                  <h4><%=items[i].itemName%></h4>
-                  <h6><%=items[i].description%></h6>
-                  <h6><%=items[i].stackType%></h6>
+                  <h4>-<%=items[i].itemName%></h4>
+                  <h6>-<%=items[i].description%></h6>
+                  <h6>-<%=items[i].stackType%></h6>
               </br>
             </li>
 
           <% } %>
           </ul>
+
           
 
       </div>  

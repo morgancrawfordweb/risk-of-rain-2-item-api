@@ -74,10 +74,13 @@ module.exports = {
       try{
 
         // need to figure out the translation between controller and actual query in the URL
-        const item = await Item.find({'item.itemName': req.params.item})
+        const itemName = req.params.itemName.toLowerCase()
+        const items = await Item.find({itemName:itemName})
 
-        res.render('items.ejs',{item: item})
-      }catch(err){
+        if(items){
+        res.render('items.ejs',{items: items})
+
+      }}catch(err){
         console.log(err)
       }
     }

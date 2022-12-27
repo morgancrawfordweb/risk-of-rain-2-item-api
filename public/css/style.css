@@ -3,7 +3,7 @@ body{
     color: bisque;
 }
 #navBarHolder{
-    width: 80%;
+    width: 75%;
     padding: 2% 0;
     position: fixed;
 }
@@ -11,9 +11,7 @@ body{
     align-self: center;
     padding: 7% 0;
 }
-#navBar *{
-    padding: 0 1%;
-}
+
 li{
     margin: 5%;
     background-color: rgba(22, 116, 24, 0.392);
@@ -22,7 +20,7 @@ li{
 .howTo{
     border: 2px solid white;
     justify-content: center;
-    margin: 50%;
+    margin: 25%;
 }
 tbody{
     width: 100%;
@@ -31,4 +29,16 @@ tr{
     margin: auto;
     padding: 10px 0;
     border-width: 2px;
+}
+
+@media screen and (max-width:530px){
+body{
+    background-color: blue;
+}
+    .howTo{
+    margin:50%
+}
+#navBar{
+    margin-bottom: 25px;
+}
 }

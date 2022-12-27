@@ -108,9 +108,14 @@ module.exports = {
       },
       getSpecificItems: async(req,res) =>{
         try{
-          const item = await Item.find({'item.itemName': req.params.item}).lean()
-          res.json(item)
-        }catch(err){
+  
+          // need to figure out the translation between controller and actual query in the URL
+          const itemName = req.params.itemName.toLowerCase()
+          const items = await Item.find({itemName:itemName})
+  
+          if(items){
+            res.json(items.lean())
+        }}catch(err){
           console.log(err)
         }
       }
