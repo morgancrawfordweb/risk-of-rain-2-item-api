@@ -2,14 +2,14 @@ const Item = require('../models/Item');
 
 
 module.exports = {
-    getAllItems: async(req,res) =>{
-      try{
-        const items = await Item.find().sort()
-        res.render('items.ejs',{items: items})
-      }catch(err){
-        console.log(err)
-      }
-    },
+  getAllItems: async(req,res) =>{
+    try{
+      const items = await Item.find().sort()
+      res.render('items.ejs',{items: items})
+    }catch(err){
+      console.log(err)
+    }
+  },
     getCommonItems: async(req,res) =>{
       try{
         var sortedItems = {itemName: 1}
@@ -70,20 +70,18 @@ module.exports = {
         console.log(err)
       }
     },
-    getSpecificItems: async(req,res) =>{
-      try{
+    // getSpecificItems: async(req,res) =>{
+    //   try{
+    //     // need to figure out the translation between controller and actual query in the URL
+    //     const items = await Item.findById({_id:req.params.itemID})
 
-        // need to figure out the translation between controller and actual query in the URL
-        const itemName = req.params.itemName.toLowerCase()
-        const items = await Item.find({itemName:itemName})
+    //     if(items){
+    //     res.render('items.ejs',{items: items})
 
-        if(items){
-        res.render('items.ejs',{items: items})
-
-      }}catch(err){
-        console.log(err)
-      }
-    }
+    //   }}catch(err){
+    //     console.log(err)
+    //   }
+    // }
     
 }
 

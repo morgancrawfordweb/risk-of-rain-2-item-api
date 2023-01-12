@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
@@ -11,6 +12,7 @@ const connectDB = require("./config/database");
 
 const mainRoutes = require("./routes/main");
 const apiRoutes = require("./routes/api");
+
 
 
 
@@ -54,7 +56,8 @@ app.use("/", mainRoutes);
 app.use("/api", apiRoutes);
 
 
+
 //Server Running
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`Server is running better go catch it!`);
-});
+app.get('/express_backend',(req,res)=>{
+  res.send({express: 'Your express backend is connected to react'})
+})

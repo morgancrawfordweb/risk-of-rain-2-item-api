@@ -1,6 +1,3 @@
-const Survivor = require('../models/Survivor');
-const Item = require('../models/Item');
-
 
 module.exports = {
     getIndex: (req, res) => {

@@ -12,8 +12,6 @@ const survivorController = require("../controllers/survivor");
 router.get("/", indexController.getIndex);
 
 
-// router.get("/everything", indexController.getEverything);
-
 //This router will get everything item related
 router.get("/everyItem", itemController.getAllItems);
 router.get("/commonItems", itemController.getCommonItems);
@@ -23,7 +21,7 @@ router.get("/equipmentItems", itemController.getEquipmentItems);
 router.get("/voidItems", itemController.getVoidItems);
 router.get("/lunarItems", itemController.getLunarItems);
 router.get("/bossItems", itemController.getBossItems);
-router.get("/:itemName", itemController.getSpecificItems);
+// router.get("everyItem/:itemName", itemController.getSpecificItems);
 
 
 //This router will get everything survivor related

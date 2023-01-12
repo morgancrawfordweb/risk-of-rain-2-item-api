@@ -1,0 +1,74 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+        <ul class="row list-unstyled">
+
+          <div class="absolute howTo">
+            <h2>List of Environments</h2>
+            <span>Here are a list of all possible environments! This is more for beginners.</span>
+            <table>
+
+              <tr>
+                <td>Item Name</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Item Description</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Stack Type</td>
+                <td></td>
+              </tr>
+            </table>
+
+          </div>
+
+          <!-- <div class = "row">
+            <div class ="col-md-12 align-self-center">
+              <h2>Item layout below</h2>
+              <div class ='row'>
+              <div class = "col-4 col-sm-2 align-self-center">
+                Item Name
+              </div>
+              <div class = "col-sm-4 col-sm-10 align-self-center">
+                The Item name and any descriptions will go here
+              </div>
+              <div class = "col-8 col-sm-2 align-self-center">
+                Item Description
+              </div>
+              <div class = "col-4 col-sm-10 align-self-center">
+                This will be the items description including how they stack when you have multiple items in the same run.
+              </div>
+              <div class = "col-8 col-sm-2 align-self-center">
+                Stack Type
+              </div>
+              <div class = "col-4 col-sm-10 align-self-center">
+                Some items have different stack types and I feel it is important to note that. A linear stacktype is exactly how it sounds, if the item is +5%, then thats what it adds. A hyperbolic stack type slowely gets less effective the more you stack.
+              </div>
+              </div>  
+            </div>
+          </div> -->
+          
+          <% for(let i=0; i<ienvironments.length; i++) {%>
+            <li>
+              <br>
+                  <h4>-<%=environments[i].name%></h4>
+                  <h6>-<%=environments[i].description%></h6>
+                  <h6>-<%=environments[i].enemiesFound%></h6>
+                  <h6>-<%=environments[i].bossSpawns%></h6>
+              </br>
+            </li>
+
+          <% } %>
+          </ul>
+
+          
+
+      </div>  
+    </div>
+  </div>
+</div>
+</div>
+<%- include('partials/footer') -%>

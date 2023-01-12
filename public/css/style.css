@@ -15,6 +15,7 @@ body{
 li{
     margin: 5%;
     background-color: rgba(22, 116, 24, 0.392);
+    border: 3px purple;
     padding: 15px;
 }
 .howTo{
@@ -32,9 +33,9 @@ tr{
 }
 
 @media screen and (max-width:530px){
-body{
-    background-color: blue;
-}
+/* body{ */
+    /* background-color: blue; */
+/* } */
     .howTo{
     margin:50%
 }
