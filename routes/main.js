@@ -27,9 +27,9 @@ router.get("/:itemName", itemController.getSpecificItems);
 
 
 //This router will get everything survivor related
-router.get("/survivor", survivorController.getAllSurvivors);
-// router.get("/rangedSurvivors", survivorController.getRangedSurvivors);
-// router.get("/meleeSurvivors", survivorController.getMeleeSurvivors);
+router.get("/survivor/everySurvivor", survivorController.getAllSurvivors);
+router.get("/survivor/rangedSurvivors", survivorController.getRangedSurvivors);
+router.get("/survivor/meleeSurvivors", survivorController.getMeleeSurvivors);
 // router.get(`/survivors/:name`, survivorController.getSpecificSurvivors);
 
 
