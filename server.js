@@ -51,6 +51,8 @@ app.use(
 //Use flash messages for errors, info, ect...
 app.use(flash());
 
+//Setup for heroku to grab my pictures
+
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/api", apiRoutes);
