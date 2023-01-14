@@ -12,24 +12,24 @@ module.exports = {
             console.log(err)
         }
  },
-//     getRangedSurvivors: async(req,res)=>{
-//     try{
-//         const rangedSurvivors = await Survivor.find({type: "Ranged"}).lean()
+    getRangedSurvivors: async(req,res)=>{
+    try{
+        const rangedSurvivors = await Survivor.find({type: "Ranged"}).lean()
        
-//         res.json(rangedSurvivors)
+        res.json(rangedSurvivors)
         
-//     }catch(err){
-//         console.log(err)
-//     }
-//  },
-//     getMeleeSurvivors: async(req,res) =>{
-//         try{
-//             const meleeSurvivors = await Survivor.find({type: "Melee"}).lean()
-//             res.json(meleeSurvivors)
-//         }catch(err){
-//             console.log(err)
-//         }
-//     },    
+    }catch(err){
+        console.log(err)
+    }
+ },
+    getMeleeSurvivors: async(req,res) =>{
+        try{
+            const meleeSurvivors = await Survivor.find({type: "Melee"}).lean()
+            res.json(meleeSurvivors)
+        }catch(err){
+            console.log(err)
+        }
+    },    
 //     getSpecificSurvivors: async(req,res) =>{
 //       try{
 //         const survivors = await Survivor.find().lean()
