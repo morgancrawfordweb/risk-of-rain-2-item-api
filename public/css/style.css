@@ -33,9 +33,6 @@ tr{
 }
 
 @media screen and (max-width:530px){
-/* body{ */
-    /* background-color: blue; */
-/* } */
     .howTo{
     margin:50%
 }

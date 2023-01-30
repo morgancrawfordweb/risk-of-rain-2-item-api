@@ -195,3 +195,7 @@ db.items.insertMany([
 
 
 ]);
+
+db.monsters.insertMany([
+{ }
+]);

@@ -1,0 +1,33 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+        <ul class="row list-unstyled">
+
+
+          <div class="absolute">
+            <h2>List of Survivors</h2>
+            <span>Here are all of the survivor stats!</span>
+
+          </div>
+
+       
+            <% for(let i=0; i<monsters.length; i++) {%>
+              <li>
+                <br>
+                    <h4><%=survivors[i].monsterName%></h4>
+                    <h6>Health:   <%=monster[i].health%></h6>
+                    <h6>Damage:   <%=monster[i].damage%></h6>
+                </br>
+              </li>
+  
+            <% } %>
+            </ul>
+            
+
+      </div>  
+    </div>
+  </div>
+</div>
+</div>
+<%- include('partials/footer') -%>

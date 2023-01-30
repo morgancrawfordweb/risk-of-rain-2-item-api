@@ -3,10 +3,11 @@ const router = express.Router();
 const indexController = require("../controllers/index");
 const itemController = require("../controllers/item");
 const survivorController = require("../controllers/survivor");
+const environmentController = require("../controllers/environment")
+const monsterController = require("../controllers/monster");
+
 
 //Future build below
-// const monsterController = require("../controllers/monster");
-// const environmentController = require("../controllers/environment");
 
 //Main Routes - simplified for now
 router.get("/", indexController.getIndex);
@@ -29,6 +30,16 @@ router.get("/survivor/everySurvivor", survivorController.getAllSurvivors);
 router.get("/survivor/rangedSurvivors", survivorController.getRangedSurvivors);
 router.get("/survivor/meleeSurvivors", survivorController.getMeleeSurvivors);
 // router.get(`/survivors/:name`, survivorController.getSpecificSurvivors);
+
+
+//Environment routes 
+// router.get("/environment/allEnvironment"), environmentController.getAllEnvironments);
+// router.get("/environment/firstEnvironment"), environmentController.getFirstEnvironments);
+// router.get("/environment/secondEnvironment"), environmentController.getSecondEnvironments);
+// router.get("/environment/thirdEnvironment"), environmentController.getThirdEnvironments);
+// router.get("/environment/fourthEnvironment"), environmentController.getFourthEnvironments);
+// router.get("/environment/fifthEnvironment"), environmentController.getFifthEnvironments);
+
 
 
 module.exports = router;
