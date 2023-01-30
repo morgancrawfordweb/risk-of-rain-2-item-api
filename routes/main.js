@@ -3,8 +3,8 @@ const router = express.Router();
 const indexController = require("../controllers/index");
 const itemController = require("../controllers/item");
 const survivorController = require("../controllers/survivor");
-const environmentController = require("../controllers/environment")
-const monsterController = require("../controllers/monster");
+// const environmentController = require("../controllers/environment")
+// const monsterController = require("../controllers/monster");
 
 
 //Future build below

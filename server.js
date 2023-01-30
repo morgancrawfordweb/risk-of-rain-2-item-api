@@ -58,8 +58,7 @@ app.use("/", mainRoutes);
 app.use("/api", apiRoutes);
 
 
-
 //Server Running
-app.get('/express_backend',(req,res)=>{
-  res.send({express: 'Your express backend is connected to react'})
-})
+app.listen(process.env.PORT, () => {
+  console.log("Server is running, you better catch it!");
+});
