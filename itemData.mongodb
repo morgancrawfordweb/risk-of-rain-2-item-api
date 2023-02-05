@@ -12,7 +12,7 @@ db.items.drop();
 
 
 // Insert a few documents into the sales collection.
-db.items.insertMany([
+// db.items.insertMany([
 
 
 
@@ -194,7 +194,8 @@ db.items.insertMany([
 {itemName: "Will-o'-the-wisp", color: 'Green', description: 'On killing an enemy, spawn a lava pillar in a 12m (+2.4m per stack) radius for 350% (+280% per stack) base damage.', cooldown: 'None', stackType: 'Linear',rarity: 'Uncommon'}
 
 
-]);
+// ]);
+
 
 db.monsters.insertMany([
 { }

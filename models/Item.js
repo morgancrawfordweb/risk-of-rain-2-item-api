@@ -7,6 +7,7 @@ const ItemSchema = new mongoose.Schema({
   cooldown:{type:Number},
   stackType:{type:String},
   itemName: { type: String, unique: true },
+  itemImage:{type:String},
 });
 
 module.exports = mongoose.model("Item", ItemSchema);
