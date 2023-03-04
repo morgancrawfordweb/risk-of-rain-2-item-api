@@ -22,7 +22,8 @@ router.get("/equipmentItems", itemController.getEquipmentItems);
 router.get("/voidItems", itemController.getVoidItems);
 router.get("/lunarItems", itemController.getLunarItems);
 router.get("/bossItems", itemController.getBossItems);
-// router.get("everyItem/:itemName", itemController.getSpecificItems);
+
+// router.get("/:itemName", itemController.getSpecificItems);
 
 
 //This router will get everything survivor related

@@ -2,12 +2,7 @@ body{
     background-color: black;
     color: bisque;
 }
-#navBarHolder{
-    width: 75%;
-    padding: 2% 0;
-    position: fixed;
 
-}
 .title{
     align-self: center;
     padding: 7% 0;
@@ -25,23 +20,51 @@ li{
     margin: 8% 20% 3% 20%;
     width: 50%;
 }
-tbody{
-    width: 100%;
+tbody *{
+    color: bisque;
 }
 .navbar{
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
-tr{
+/* tr{
     margin: auto;
     padding: 10px 0;
     border-width: 2px;
-}
+} */
 img{
     width: 40px;
 }
 
-/* Code for the haburger menu*/
-@media screen and (max-width:673px){
+
+
+#myBtn {
+    display: none; /* Hide the button by default */
+    position: fixed; /* Fix the button to the bottom right corner of the screen */
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* Make sure the button is on top of other elements */
+    font-size: 18px; /* Increase font size */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Set background color */
+    color: white; /* Set text color */
+    cursor: pointer; /* Add a cursor on hover */
+    padding: 15px; /* Add some padding */
+    border-radius: 10px; /* Add rounded corners */
+  }
+  
+  #myBtn:hover {
+    background-color: black; /* Change background color on hover */
+  }
+
+
+
+
+/* Code for the hamburger menu*/
+/* @media screen and (max-width:673px){
 .howTo{
     margin:10%;
     padding: 7%;
@@ -70,4 +93,22 @@ a{
 
 
 
-}
+} */
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile devices */
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 99;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      background-color: #555;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }

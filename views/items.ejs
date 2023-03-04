@@ -7,7 +7,7 @@
           <div class="absolute howTo">
             <h2>List of Items</h2>
             <span>Below are the list of items pick-ups! The format for the items are below</span>
-            <table>
+            <table class = "table table-striped table-bordered">
 
               <tr>
                 <td>Item Name</td>
@@ -24,12 +24,11 @@
             </table>
 
           </div>
-          
           <div id="items" class="col-12">
           <% for(let i=0; i<items.length; i++) {%>
             <li>
               <br>
-                  <h4><img src='<%=items[i].itemImage%>'></h4>
+                  <h4><img src='<%=items[i].itemImage%>' loading="lazy"></h4>
                   <h4>-<%=items[i].itemName%></h4>
                   <h6>-<%=items[i].description%></h6>
                   <h6>-<%=items[i].stackType%></h6>
@@ -39,6 +38,8 @@
           <% } %>
           </ul>
       </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 
           
 

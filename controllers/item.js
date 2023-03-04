@@ -4,7 +4,15 @@ const Item = require('../models/Item');
 module.exports = {
   getAllItems: async(req,res) =>{
     try{
-      const items = await Item.find().sort()
+
+      // let rarityMap = [
+      //   common:1
+      //   uncommon:2
+      //   legendary:3
+      // ]
+
+      const sortByRarity = {itemName:1}
+      const items = await Item.find().sort(sortByRarity)
       res.render('items.ejs',{items: items})
     }catch(err){
       console.log(err)
@@ -72,12 +80,14 @@ module.exports = {
     },
     // getSpecificItems: async(req,res) =>{
     //   try{
-    //     // need to figure out the translation between controller and actual query in the URL
-    //     const items = await Item.findById({_id:req.params.itemID})
+    //     const itemName = req.params.itemName
+    //     const items = await Item.findOne({itemName: itemName})
 
     //     if(items){
-    //     res.render('items.ejs',{items: items})
+    //     res.render('items.ejs', {items: items})
 
+    //   }else{
+    //     console.log('error')
     //   }}catch(err){
     //     console.log(err)
     //   }
