@@ -4,7 +4,8 @@ body{
 }
 
 .title{
-    align-self: center;
+    display: flex;
+    justify-content: center;
     padding: 7% 0;
 }
 
@@ -16,8 +17,9 @@ li{
 }
 .howTo{
     border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 8% 20% 3% 20%;
     width: 50%;
 }
 tbody *{
@@ -27,15 +29,16 @@ tbody *{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
-/* tr{
-    margin: auto;
-    padding: 10px 0;
-    border-width: 2px;
-} */
+.navbar a{
+    padding: 0 5px;
+}
 img{
     width: 40px;
+}
+.row{
+    display: flex;
+    justify-content: center;
 }
 
 
