@@ -3,6 +3,7 @@ const router = express.Router();
 const indexController = require("../controllers/index");
 const itemController = require("../controllers/item");
 const survivorController = require("../controllers/survivor");
+const shrineController = require("../controllers/shrine");
 // const environmentController = require("../controllers/environment")
 // const monsterController = require("../controllers/monster");
 
@@ -10,6 +11,7 @@ const survivorController = require("../controllers/survivor");
 //Future build below
 
 //Main Routes - simplified for now
+//Will also get the shring of chance mini-game
 router.get("/", indexController.getIndex);
 
 
@@ -40,6 +42,10 @@ router.get("/survivor/meleeSurvivors", survivorController.getMeleeSurvivors);
 // router.get("/environment/thirdEnvironment"), environmentController.getThirdEnvironments);
 // router.get("/environment/fourthEnvironment"), environmentController.getFourthEnvironments);
 // router.get("/environment/fifthEnvironment"), environmentController.getFifthEnvironments);
+
+//Shrine Routes
+router.get("/shrines", shrineController.getAllShrines)
+router.get("/shrines/feelingLucky", shrineController.feelingLuckyPunk)
 
 
 

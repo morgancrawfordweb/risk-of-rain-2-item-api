@@ -11,8 +11,8 @@ module.exports = {
       //   legendary:3
       // ]
 
-      const sortByRarity = {itemName:1}
-      const items = await Item.find().sort(sortByRarity)
+      const sortByItemName = {itemName:1}
+      const items = await Item.find().sort(sortByItemName)
       res.render('items.ejs',{items: items})
     }catch(err){
       console.log(err)

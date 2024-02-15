@@ -46,7 +46,7 @@ img{
 
 
 #myBtn {
-    display: none; /* Hide the button by default */
+    display: flex; /* Hide the button by default */
     position: fixed; /* Fix the button to the bottom right corner of the screen */
     bottom: 20px;
     right: 30px;
