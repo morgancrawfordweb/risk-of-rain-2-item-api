@@ -44,8 +44,8 @@ router.get("/survivor/meleeSurvivors", survivorController.getMeleeSurvivors);
 // router.get("/environment/fifthEnvironment"), environmentController.getFifthEnvironments);
 
 //Shrine Routes
-router.get("/shrines", shrineController.getAllShrines)
-router.get("/shrines/feelingLucky", shrineController.feelingLuckyPunk)
+// router.get("/shrines", shrineController.getAllShrines)
+// router.get("/shrines/feelingLucky", shrineController.feelingLuckyPunk)
 
 
 
